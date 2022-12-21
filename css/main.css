@@ -1005,6 +1005,7 @@ body {
 @media screen and (min-width: 1200px) {
   .page-footer__flex-container {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
@@ -1057,6 +1058,7 @@ body {
 @media screen and (min-width: 1200px) {
   .page-footer__flex-container {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
@@ -1148,6 +1150,11 @@ body {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .sign-form {
+    flex-direction: row;
+  }
+}
 
 .sign-form__label {
   position: relative;
@@ -1157,6 +1164,12 @@ body {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 1200px) {
+  .sign-form__label {
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }
 
 .sign-form__description {
@@ -1178,6 +1191,11 @@ body {
   outline: transparent;
   background-color: inherit;
   cursor: pointer;
+}
+@media screen and (min-width: 1200px) {
+  .sign-form__input {
+    width: 358px;
+  }
 }
 .sign-form__input:focus {
   border-color: var(--accent-color);

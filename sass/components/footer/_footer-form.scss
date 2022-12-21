@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include desktop {
+    flex-direction: row;
+  }
 }
 
 .sign-form__label {
@@ -15,6 +18,11 @@
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
+
+  @include desktop {
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }
 
 .sign-form__description {
@@ -39,6 +47,10 @@
   outline: transparent;
   background-color: inherit;
   cursor: pointer;
+
+  @include desktop {
+    width: 358px;
+  }
 
   &:focus {
     border-color: var(--accent-color);
