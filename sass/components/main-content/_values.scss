@@ -1,9 +1,27 @@
 .values__list {
-  display: flex;
+  @include table {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  @include desktop {
+    flex-wrap: nowrap;
+  }
 }
 
 .values__item:not(:last-child) {
-  margin-right: 30px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+
+.values__item {
+  @include table {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .values {
@@ -30,8 +48,15 @@
 
 .value__icon-container {
   @include inline-flex-al-jf();
-  width: 270px;
+  width: 450px;
   height: 120px;
+  @include table {
+    width: 354px;
+  }
+  @include desktop {
+    width: 270px;
+  }
+
   margin-bottom: 30px;
 
   background-color: var(--secondary-background-color);
