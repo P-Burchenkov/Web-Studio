@@ -1,14 +1,33 @@
 .clients {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  @include desktop {
+    flex-wrap: nowrap;
+  }
 }
 
-.clients__item:not(:last-child) {
-  margin-right: 30px;
+.clients__item {
+  flex-basis: calc((100% - 30px) / 2);
+  @include table {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  @include desktop {
+    flex-basis: calc((100% - 150px) / 6);
+  }
 }
+
+// .clients__item:not(:last-child) {
+//   margin-right: 30px;
+// }
 
 .clients__link {
   @include inline-flex-al-jf();
-  width: 170px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    max-width: 210px;
+  }
+
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -22,5 +41,12 @@
   &:focus {
     fill: var(--accent-color);
     border-color: var(--accent-color);
+  }
+
+  @include table {
+    width: 226px;
+  }
+  @include desktop {
+    width: 170px;
   }
 }
