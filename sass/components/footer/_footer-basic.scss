@@ -5,13 +5,39 @@
   background-color: var(--banner-background-color);
 }
 
-.page-footer__container {
+.page-footer__flex-container {
   display: flex;
-  &--flex-element:nth-child(1) {
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.page-footer__contacts-container {
+    margin-bottom: 60px;
+  @include table {
+    display: flex;
+  }
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.contacts-container--flex-element:nth-child(1) {
+  margin-bottom: 60px;
+  @include table {
+    margin-bottom: 0;
+    margin-right: 165px;
+  }
+  @include desktop {
     margin-right: 70px;
   }
+}
 
-  &--flex-element:last-child {
+.page-footer__form-container {
+  @include desktop {
     margin-left: auto;
   }
 }

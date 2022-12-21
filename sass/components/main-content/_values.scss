@@ -48,7 +48,7 @@
 
 .value__icon-container {
   @include inline-flex-al-jf();
-  width: 450px;
+  width: 100%;
   height: 120px;
   @include table {
     width: 354px;

@@ -617,7 +617,7 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 450px;
+  width: 100%;
   height: 120px;
   margin-bottom: 30px;
   background-color: var(--secondary-background-color);
@@ -697,7 +697,7 @@ body {
 }
 
 .team-list__text {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -706,20 +706,25 @@ body {
 }
 
 .team-list__item {
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 767px) {
+  .team-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .team-list__item {
     flex-basis: calc((100% - 30px) / 2);
   }
 }
-
-@media screen and (max-width: 767px) {
-  .team-list__item:not(:last-child) {
-    margin-bottom: 30px;
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    flex-basis: calc((100% - 90px) / 4);
+    padding-bottom: 30px;
   }
 }
 
@@ -992,14 +997,50 @@ body {
   background-color: var(--banner-background-color);
 }
 
-.page-footer__container {
+.page-footer__flex-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.page-footer__container--flex-element:nth-child(1) {
-  margin-right: 70px;
+@media screen and (min-width: 1200px) {
+  .page-footer__flex-container {
+    flex-direction: row;
+  }
 }
-.page-footer__container--flex-element:last-child {
-  margin-left: auto;
+
+.page-footer__contacts-container {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .page-footer__contacts-container {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer__contacts-container {
+    margin-bottom: 0;
+  }
+}
+
+.contacts-container--flex-element:nth-child(1) {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .contacts-container--flex-element:nth-child(1) {
+    margin-bottom: 0;
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-container--flex-element:nth-child(1) {
+    margin-right: 70px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__form-container {
+    margin-left: auto;
+  }
 }
 
 .page-footer {
@@ -1008,18 +1049,54 @@ body {
   background-color: var(--banner-background-color);
 }
 
-.page-footer__container {
+.page-footer__flex-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.page-footer__container--flex-element:nth-child(1) {
-  margin-right: 70px;
+@media screen and (min-width: 1200px) {
+  .page-footer__flex-container {
+    flex-direction: row;
+  }
 }
-.page-footer__container--flex-element:last-child {
-  margin-left: auto;
+
+.page-footer__contacts-container {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .page-footer__contacts-container {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer__contacts-container {
+    margin-bottom: 0;
+  }
+}
+
+.contacts-container--flex-element:nth-child(1) {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .contacts-container--flex-element:nth-child(1) {
+    margin-bottom: 0;
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-container--flex-element:nth-child(1) {
+    margin-right: 70px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__form-container {
+    margin-left: auto;
+  }
 }
 
 .site-adress__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .site-adress__link {
@@ -1051,6 +1128,7 @@ body {
 .foot-social-links__text,
 .sign-title {
   margin-bottom: 20px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -1058,13 +1136,22 @@ body {
   text-transform: uppercase;
   color: var(--white-color);
 }
+@media screen and (min-width: 1200px) {
+  .foot-social-links__text,
+.sign-title {
+    text-align: left;
+  }
+}
 
 .sign-form {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sign-form__label {
-  margin-right: 12px;
+  position: relative;
+  margin-bottom: 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -1082,7 +1169,7 @@ body {
 }
 
 .sign-form__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   padding-left: 70px;
   border-radius: 4px;

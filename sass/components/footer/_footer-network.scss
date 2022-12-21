@@ -10,6 +10,7 @@
 .foot-social-links__text,
 .sign-title {
   margin-bottom: 20px;
+  text-align: center;
 
   font-weight: 700;
   font-size: 14px;
@@ -18,4 +19,8 @@
   text-transform: uppercase;
 
   color: var(--white-color);
+
+  @include desktop {
+    text-align: left;
+  }
 }
