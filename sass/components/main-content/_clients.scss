@@ -9,6 +9,7 @@
 
 .clients__item {
   flex-basis: calc((100% - 30px) / 2);
+
   @include table {
     flex-basis: calc((100% - 60px) / 3);
   }
@@ -17,16 +18,8 @@
   }
 }
 
-// .clients__item:not(:last-child) {
-//   margin-right: 30px;
-// }
-
 .clients__link {
   @include inline-flex-al-jf();
-  @media screen and (max-width: 767px) {
-    width: 100%;
-    max-width: 210px;
-  }
 
   height: 92px;
   border: 1px solid #afb1b8;
@@ -41,6 +34,11 @@
   &:focus {
     fill: var(--accent-color);
     border-color: var(--accent-color);
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    max-width: 210px;
   }
 
   @include table {

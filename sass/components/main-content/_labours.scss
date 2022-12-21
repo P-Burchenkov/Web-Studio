@@ -1,3 +1,9 @@
+.labour {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
 .labour__list {
   display: flex;
 }
