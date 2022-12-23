@@ -1,7 +1,20 @@
 .button-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 8px;
+  width: 326px;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  @include table {
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 
 .button {
@@ -31,6 +44,4 @@
   }
 }
 
-.button-list__item:not(:last-child) {
-  margin-right: 8px;
-}
+

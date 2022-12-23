@@ -5,5 +5,11 @@
 }
 
 .grid__item {
-  width: 370px;
+  width: 450px;
+  @include table {
+    width: 354px;
+  }
+  @include desktop {
+    width: 370px;
+  }
 }
