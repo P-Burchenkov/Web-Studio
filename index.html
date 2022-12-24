@@ -30,7 +30,7 @@
               class="main-nav__icon"
               aria-label="перемикач мобільного меню"
             >
-              <use href="./images/icons.svg#icon-menu" class="main-nav__icon--open"></use>
+              <use href="./images/icons.svg#icon-mob-menu" class="main-nav__icon--open"></use>
               <use href="./images/icons.svg#icon-close" class="main-nav__icon--close"></use>
             </svg>
           </button>
@@ -136,37 +136,51 @@
           <ul class="labour__list">
             <li class="labour__item">
               <div class="labour__thumb">
-                <img
-                  src="./images/desktop.jpg"
-                  width="370"
-                  height="294"
-                  alt="робочий стол з комп'ютером"
-                  class="labour__image"
-                />
+                <picture>
+                  <source
+                    srcset="./images/descktop.jpg 1x, ./images/descktop@2x.jpg 2x"
+                    type="image/jpeg"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/descktop.jpg"
+                    alt="ноутбук"
+                    width="100%"
+                    class="labour__image"
+                  />
+                </picture>
+
                 <p class="labour__text">Десктопні додатки</p>
               </div>
             </li>
             <li class="labour__item">
               <div class="labour__thumb">
-                <img
-                  src="./images/laptop.jpg"
-                  width="370"
-                  height="294"
-                  alt="ноутбук"
-                  class="labour__image"
-                />
+                <picture>
+                  <source
+                    srcset="./images/mobile.jpg 1x, ./images/mobile@2x.jpg 2x"
+                    type="image/jpeg"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/mobile.jpg"
+                    alt="мобільний телефон"
+                    width="100%"
+                    class="labour__image"
+                  />
+                </picture>
                 <p class="labour__text">Мобільні додатки</p>
               </div>
             </li>
             <li class="labour__item">
               <div class="labour__thumb">
-                <img
-                  src="./images/tablet.jpg"
-                  width="370"
-                  height="294"
-                  alt="планшет"
-                  class="labour__image"
-                />
+                <picture>
+                  <source
+                    srcset="./images/design.jpg 1x, ./images/design@2x.jpg 2x"
+                    type="image/jpeg"
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./images/design.jpg" alt="планшет" width="100%" class="labour__image" />
+                </picture>
                 <p class="labour__text">Дизайнерські рішення</p>
               </div>
             </li>
@@ -186,6 +200,7 @@
                     ./images/igor-demyanenko-desck.jpg    1x,
                     ./images/igor-demyanenko-desck@2x.jpg 2x
                   "
+                  type="image/jpeg"
                   media="(min-width: 1200px)"
                 />
                 <source
@@ -193,18 +208,15 @@
                     ./images/igor-demyanenko-tab.jpg    1x,
                     ./images/igor-demyanenko-tab@2x.jpg 2x
                   "
+                  type="image/jpeg"
                   media="(min-width: 768px)"
                 />
                 <source
                   srcset="./images/igor-demyanenko.jpg 1x, ./images/igor-demyanenko@2x.jpg 2x"
-                  media="(min-width:480px)"
+                  media="(max-width:767px)"
+                  type="image/jpeg"
                 />
-                <img
-                  src="./images/igor-demyanenko.jpg"
-                  alt="фото члена команди"
-                  width="270"
-                  height="260"
-                />
+                <img src="./images/igor-demyanenko.jpg" alt="фото члена команди" width="100%" />
               </picture>
 
               <h3 class="team-list__title">Ігор Дем'яненко</h3>
@@ -241,7 +253,25 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img src="./images/olga-repina.jpg" alt="фото жінки" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/olga-repina-desk.jpg 1x, ./images/olga-repina-desk@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/olga-repina-tab.jpg 1x, ./images/olga-repina-tab@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/olga-repina.jpg 1x, ./images/olga-repina@2x.jpg 2x"
+                  media="(max-width:767px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/olga-repina.jpg" alt="фото члена команди" width="100%" />
+              </picture>
+
               <h3 class="team-list__title">Ольга Рєпіна</h3>
               <p class="team-list__text">Frontend Developer</p>
               <ul class="network-list">
@@ -276,7 +306,27 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img src="./images/micola-tarasov.jpg" alt="фото чоловіка" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/micola-tarasov-desck.jpg    1x,
+                    ./images/micola-tarasov-desck@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/micola-tarasov-tab.jpg 1x, ./images/micola-tarasov-tab@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/micola-tarasov.jpg 1x, ./images/micola-tarasov@2x.jpg 2x"
+                  media="(max-width:767px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/micola-tarasov.jpg" alt="фото члена команди" width="100%" />
+              </picture>
               <h3 class="team-list__title">Микола Тарасов</h3>
               <p class="team-list__text">Marketing</p>
               <ul class="network-list">
@@ -311,12 +361,30 @@
               </ul>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/mikhailo-ermakov.jpg"
-                alt="фото чоловіка"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mikhailo-ermakov-desck.jpg    1x,
+                    ./images/mikhailo-ermakov-desck@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mikhailo-ermakov-tab.jpg    1x,
+                    ./images/mikhailo-ermakov-tab@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/mikhailo-ermakov.jpg 1x, ./images/mikhailo-ermakov@2x.jpg 2x"
+                  media="(max-width:767px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/mikhailo-ermakov.jpg" alt="фото члена команди" width="100%" />
+              </picture>
               <h3 class="team-list__title">Михайло Єрмаков</h3>
               <p class="team-list__text">UI Designer</p>
               <ul class="network-list">
