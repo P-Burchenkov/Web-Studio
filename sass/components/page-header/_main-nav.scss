@@ -50,23 +50,22 @@
   background-color: currentColor;
 }
 
-.main-nav__button {
+.menu-button {
   display: inline-flex;
   margin: 0;
   padding: 0;
   border: 0;
-//   outline: none;
+
   background-color: transparent;
 }
 
-// .main-nav__icon--close {
-//   display: none;
-// }
-
-.main-nav__button.is-open .main-nav__icon--close {
-  display: block;
+.menu__icon--close {
+  display: none;
+  .menu-button.is-open & {
+    display: block;
+  }
 }
 
-.main-nav__button.is-open .main-nav__icon--open {
+.menu-button.is-open .menu__icon--open {
   display: none;
 }
