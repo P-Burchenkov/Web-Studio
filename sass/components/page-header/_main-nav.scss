@@ -1,13 +1,8 @@
-.page-header__container {
-  display: flex;
-}
-
-.main-nav {
-  @include inline-flex-al-jf();
-}
-
 .main-nav__list {
-  display: flex;
+  display: none;
+  @include table {
+    display: flex;
+  }
 }
 
 .main-nav__item {
@@ -48,24 +43,4 @@
   border-radius: 2px;
 
   background-color: currentColor;
-}
-
-.menu-button {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: 0;
-
-  background-color: transparent;
-}
-
-.menu__icon--close {
-  display: none;
-  .menu-button.is-open & {
-    display: block;
-  }
-}
-
-.menu-button.is-open .menu__icon--open {
-  display: none;
 }
