@@ -31,12 +31,17 @@
 .values__title {
   margin-bottom: 10px;
 
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+
+  @include table {
+    text-align: left;
+  }
 }
 
 .values__text {
